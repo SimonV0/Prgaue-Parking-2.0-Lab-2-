@@ -1,0 +1,1 @@
+{"ParkingLotSize":100,"CarSize":4,"McSize":2,"CarPrice":20.0,"McPrice":10.0,"FreeParkingMin":10}

@@ -5,8 +5,6 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prague Parking", "Prague Parking\Prague Parking.csproj", "{B2AC4647-2BB6-4A66-A20B-F5424DE7FDCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prague Parking WinForm", "Prague Parking WinForm\Prague Parking WinForm.csproj", "{B3DC7C6E-5BDD-4462-AC4E-F9E54A53D0DE}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{B2AC4647-2BB6-4A66-A20B-F5424DE7FDCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2AC4647-2BB6-4A66-A20B-F5424DE7FDCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2AC4647-2BB6-4A66-A20B-F5424DE7FDCD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B3DC7C6E-5BDD-4462-AC4E-F9E54A53D0DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B3DC7C6E-5BDD-4462-AC4E-F9E54A53D0DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B3DC7C6E-5BDD-4462-AC4E-F9E54A53D0DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B3DC7C6E-5BDD-4462-AC4E-F9E54A53D0DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

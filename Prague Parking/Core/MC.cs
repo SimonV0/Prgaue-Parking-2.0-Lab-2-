@@ -11,7 +11,9 @@ namespace Prague_Parking.Core
 
         public MC() : base()
         {
-            VehicleType = "MC#";
+            VehicleType = "MC";
+            VehicleSize = ConfigFile.McSize;
+            VehicleCost = ConfigFile.McPrice;
         }
     }
 }

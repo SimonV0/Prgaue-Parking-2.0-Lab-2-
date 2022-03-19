@@ -1,4 +1,5 @@
 using Prague_Parking;
+using Prague_Parking.Core;
 
 namespace Prague_Parking_WinForm
 {
@@ -11,7 +12,8 @@ namespace Prague_Parking_WinForm
 
         private void add_vehicle_button_Click(object sender, EventArgs e)
         {
-            CRUD.AddVehicle();
+
+            ParkingSpot.AddVehicle();
         }
                 
     }

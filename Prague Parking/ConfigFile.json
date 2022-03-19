@@ -1,5 +1,6 @@
 {
-  "ParkingLotSize": 100,
+  "ParkingGarageSize": 100,
+  "ParkingSlotSize": 4,
   "CarSize": 4,
   "McSize": 2,
   "CarPrice": 20,

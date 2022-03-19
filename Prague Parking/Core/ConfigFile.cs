@@ -9,18 +9,21 @@ namespace Prague_Parking.Core
 {
     class ConfigFile
     {
-        public int ParkingLotSize { get; set; }
-        public int CarSize { get; set; }
-        public int McSize { get; set; }
-        public int CarPrice { get; set; }
-        public int McPrice { get; set; }
-        public int FreeParkingMin { get; set; }
+        public static int ParkingGarageSize { get; set; }
+        public static int ParkingSlotSize { get; set; }
+        public static int CarSize { get; set; }
+        public static int McSize { get; set; }
+        public static int CarPrice { get; set; }
+        public static int McPrice { get; set; }
+        public static int FreeParkingMin { get; set; }
+
 
         private static void SaveJSONFile()
         {
-            var configFile = new ConfigFile
+            var configFile = new ConfigFileDeserialize
             {
-                ParkingLotSize = 100,
+                ParkingGarageSize = 100,
+                ParkingSlotSize = 4,
                 CarSize = 4,
                 McSize = 2,
                 CarPrice = 20,
@@ -43,16 +46,38 @@ namespace Prague_Parking.Core
                 using (StreamReader file = File.OpenText(@"../../../ConfigFile.json"))
                 {
                     JsonSerializer serializer = new JsonSerializer();
-                    ConfigFile configFile = (ConfigFile)serializer.Deserialize(file, typeof(ConfigFile))!;
+                    ConfigFileDeserialize configFile = (ConfigFileDeserialize)serializer.Deserialize(file, typeof(ConfigFileDeserialize))!;
+                    ConfigFile.ParkingGarageSize = configFile.ParkingGarageSize;
+                    ConfigFile.ParkingSlotSize = configFile.ParkingSlotSize;
+                    ConfigFile.CarSize = configFile.CarSize;
+                    ConfigFile.McSize = configFile.McSize;
+                    ConfigFile.CarPrice = configFile.CarPrice;
+                    ConfigFile.McPrice = configFile.McPrice;
+                    ConfigFile.FreeParkingMin = configFile.FreeParkingMin;  
                 }
             }
             catch (Exception)
             {
-             
+
                 SaveJSONFile();
                 Console.WriteLine("No config file was found, default settings applied.");
             }
             
         }
     }
+
+    // Behövs för att kunna använda static properties, kunde inte deserialize static properties
+    public class ConfigFileDeserialize
+    {
+        public int ParkingGarageSize { get; set; }
+        public int ParkingSlotSize { get; set; }
+        public int CarSize { get; set; }
+        public int McSize { get; set; }
+        public int CarPrice { get; set; }
+        public int McPrice { get; set; }
+        public int FreeParkingMin { get; set; }
+
+
+    }
+
 }

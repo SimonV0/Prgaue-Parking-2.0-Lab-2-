@@ -12,7 +12,7 @@ using Prague_Parking.DataAccess;
 namespace Prague_Parking.Migrations
 {
     [DbContext(typeof(PragueParkingContext))]
-    [Migration("20220304234305_InitialCreation")]
+    [Migration("20220314202847_InitialCreation")]
     partial class InitialCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,14 +33,18 @@ namespace Prague_Parking.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("NumberPlate")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("ParkedAtTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("ParkingSize")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ParkingSpot")
+                        .HasColumnType("int");
+
                     b.Property<string>("VehicleType")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

@@ -30,29 +30,13 @@ namespace Prague_Parking.DataAccess
             }
         }
 
-
-
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        // TODO: Ta bort IsUnique, hitta bättre lösning.
+        //protected override void OnModelCreating(ModelBuilder builder)
         //{
-
-        //    if (!optionsBuilder.IsConfigured)
-        //    {
-
-        //        // Fungerade inte men lämnar kvar koden iallafall.
-
-        //        var builder = new ConfigurationBuilder()
-        //                .SetBasePath(Directory.GetCurrentDirectory())
-        //                .AddJsonFile($"appsettings.json", true, true)
-        //                .Build();
-        //        string connectionString =
-        //        builder.GetConnectionString("DefaultConnection");
-        //        optionsBuilder.UseSqlServer(connectionString);
-
-        //        //optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=PragueParking;Trusted_Connection=True;");
-
-        //    }
+        //    builder.Entity<ParkingLot>()
+        //        .HasIndex(p=>p.ParkingSpot)
+        //        .IsUnique();
         //}
-
 
     }
 }

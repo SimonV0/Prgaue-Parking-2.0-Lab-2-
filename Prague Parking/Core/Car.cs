@@ -8,12 +8,11 @@ namespace Prague_Parking.Core
 {
     public class Car : Vehicle
     {
-
-
         public Car()
         {
-            VehicleType = "Car#";
+            VehicleType = "Car";
+            VehicleSize = ConfigFile.CarSize;
+            VehicleCost = ConfigFile.CarPrice;
         }
-
     }
 }

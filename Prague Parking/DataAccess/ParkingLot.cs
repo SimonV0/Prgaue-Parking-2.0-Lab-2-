@@ -8,7 +8,7 @@ namespace Prague_Parking.DataAccess
         public int Id { get; set; }
         public DateTime ParkedAtTime { get; set; }
         public string? NumberPlate { get; set; }
-        public string? VehicleType { get; set; } // Ändra till något annat?
+        public string? VehicleType { get; set; } 
         public int? ParkingSpot { get; set; }
         public int ParkingSize { get; set; }
 

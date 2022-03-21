@@ -82,7 +82,6 @@ namespace Prague_Parking.Core
 
         }
 
-        // TODO: Fixa så att man för ökad plats när fordonet tas bort. 
 
         public static void RemoveVehicle(string numberPlate)
         {
@@ -108,7 +107,6 @@ namespace Prague_Parking.Core
             }
         }
 
-        // TODO: Lägg till en check så att man kan parkera två fordon tillsammans. 
         public static void MoveVehicle(string numberPlate, int newParkingSpot)
         {
 

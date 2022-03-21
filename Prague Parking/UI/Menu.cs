@@ -7,7 +7,6 @@ namespace Prague_Parking.UI
 {
     public class Menu
     {
-        // TODO: Fixa en översiktlig view på hela garaget.
         public static void MainMenu()
         {
             

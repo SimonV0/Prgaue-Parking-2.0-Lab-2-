@@ -30,14 +30,7 @@ namespace Prague_Parking.DataAccess
             }
         }
 
-        // TODO: Ta bort IsUnique, hitta bättre lösning.
-        //protected override void OnModelCreating(ModelBuilder builder)
-        //{
-        //    builder.Entity<ParkingLot>()
-        //        .HasIndex(p=>p.ParkingSpot)
-        //        .IsUnique();
-        //}
-
+       
     }
 }
 
